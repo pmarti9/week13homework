@@ -3,7 +3,8 @@ DROP DATABASE IF EXISTS burgers_db;
 USE burgers_db;
 
 CREATE TABLE burgers(
-    id
-    burger_name
-    devoured
+    id int NOT NULL AUTO_INCREMENT,
+    burger_name varchar(200) not null
+    devoured BOOLEAN DEFAULT false,
+    PRIMARY KEY(id)
 )

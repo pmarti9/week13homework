@@ -1,9 +1,15 @@
 const connection = require('./connection')
 
 
-selectAll('')
-insertOne('')
-updateOne('')
+function selectAll(){
+
+}
+
+function insertOne() {
+}
+function updateOne(){
+
+}
 
 
-module.exports
+module.exports = orm;
