@@ -49,8 +49,13 @@ router.delete("/api/burgers/:id", function (req, res) {
   var condition = `id = ${req.params.id}`;
   console.log("condition", condition);
   burger.delete(condition, function (result) {
+  if(result.affectedRows===1){
+    return res.status(200).end()
+  } 
+  console.log(result)
   });
-  res.redirect('/')
+  
+  // res.redirect('/')
 });
 
 module.exports = router;
